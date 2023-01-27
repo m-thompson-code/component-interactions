@@ -1,0 +1,16 @@
+<div class="navigation">
+    <a routerLink="/to-observable-pipe">Previous</a> <a routerLink="/getter-subject-pattern">Next</a>
+</div>
+
+<h1>Structural Directives and Presenter Components</h1>
+
+<p>This solution allows developer to implement features imperatively without having to worry about the complexity of reactive code.</p>
+<p>The downside is that this solution comes with obvious performance issues by having to completely rerender Components on any change.</p>
+<p>Another downside is that this solution encourages a development environment that completely abnormal to an Angular environment.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product *ngRerender="first | serialize: second" class="container" [first]="first" [second]="second"></app-product>
+</div>

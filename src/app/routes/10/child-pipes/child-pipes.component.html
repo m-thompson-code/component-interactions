@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/dependency-inject">Previous</a> <a routerLink="/memos">Next</a>
+</div>
+
+<h1>Child Component Involving Pipes (PurePipe)</h1>
+
+<p>Unlike solutions Involving Services, we will communicate with child Components using Input binds</p>
+<p>This solution takes advantage of Pipes and how they handle pure functions.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

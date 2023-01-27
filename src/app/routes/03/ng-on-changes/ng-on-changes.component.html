@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/input-getters">Previous</a> <a routerLink="/output-binds">Next</a>
+</div>
+
+<h1>Input Binds Involving ngOnChanges</h1>
+
+<p>This is a more performant solution to using getters.</p>
+<p>The main problme with this solution is that involves an imperative implementation for `product`</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

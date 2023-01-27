@@ -1,0 +1,14 @@
+<div class="navigation">
+    <a routerLink="/structural-directive">Previous</a> <a routerLink="/ng-on-changes-subject-pattern">Next</a>
+</div>
+
+<h1>Input Binds Involving Getters + Subjects</h1>
+
+<p>Behavior is great but implementation is too imperative without using a property decorator.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

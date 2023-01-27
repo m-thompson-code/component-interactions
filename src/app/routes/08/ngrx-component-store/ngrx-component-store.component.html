@@ -1,0 +1,14 @@
+<div class="navigation">
+    <a routerLink="/services">Previous</a> <a routerLink="/dependency-inject">Next</a>
+</div>
+
+<h1>NgRx Component Store</h1>
+
+<p>This solution is like using a Service + Subject, but has more boilerplate.</p>
+
+<div class="container">
+    <input [value]="first$ | async" (input)="handleFirstChange($event)" placeholder="first" type="number"><br>
+    <input [value]="second$ | async" (input)="handleSecondChange($event)" placeholder="second" type="number"><br>
+
+    <app-product #productComponent class="container"></app-product>
+</div>

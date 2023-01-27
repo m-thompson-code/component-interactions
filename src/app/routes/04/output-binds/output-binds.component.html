@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/ng-on-changes">Previous</a> <a routerLink="/local-template-variables">Next</a>
+</div>
+
+<h1>Output Binds are Meh</h1>
+
+<p>On their own, Output binds cannot help with communicating from parent to child Components ):</p>
+<p>Although it is possible for the child Component to notify the parent Component to update itself, this creates a round trip just to update itself</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

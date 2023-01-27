@@ -1,0 +1,14 @@
+<div class="navigation">
+    <a routerLink="">Previous</a> <a routerLink="/input-getters">Next</a>
+</div>
+
+<h1>Input Binds (only)</h1>
+
+<p>The quick goto for passing information to a child Component. Simple and easy, but limiting on its own.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

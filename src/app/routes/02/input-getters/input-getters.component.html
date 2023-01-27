@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/input-binds">Previous</a> <a routerLink="/ng-on-changes">Next</a>
+</div>
+
+<h1>Input Binds Involving Getters</h1>
+
+<p>At a glance, this seems to be a very reasonable answer to a reactive solution to calculating `product`.</p>
+<p>The problem is that this results in many function calls in the template regardless of which property is updated.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>

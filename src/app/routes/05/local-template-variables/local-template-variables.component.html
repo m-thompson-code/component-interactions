@@ -1,0 +1,16 @@
+<div class="navigation">
+    <a routerLink="/output-binds">Previous</a> <a routerLink="/view-child">Next</a>
+</div>
+
+<h1>Local Template Variables</h1>
+
+<p>This solution implicitly updates the child Component when you know its value should change.</p>
+<p>This solution isn't very declarative either, so it should be avoided.</p>
+<p>This kind of solution can be confusing since it involves scope defined by the template.</p>
+
+<div class="container">
+    <input [(ngModel)]="first" (input)="handleChange(productComponent)" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" (input)="handleChange(productComponent)" placeholder="second" type="number"><br>
+
+    <app-product #productComponent class="container" [first]="first" [second]="second"></app-product>
+</div>

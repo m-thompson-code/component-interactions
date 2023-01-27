@@ -1,0 +1,49 @@
+<h1>Reactive Parent to Child Component Communication</h1>
+
+<p>There is more to Component interaction than direct parent to child Component communication. However, it is common to produce features in a top-down archecture when working with Angular since its structure is starts from a root and branches out to children dependencies.</p>
+<p>There are many options to consider before committing to a bi-directional data-flow which is why it's commonly questioned as a code smell once introduced into the codebase.</p>
+
+<div>
+    <h2>The Basics</h2>
+
+    <p>Concepts listed by the official Angular documentation on <a href="https://angular.io/guide/component-interaction" target="_blank">Component Interactions</a>.</p>
+    
+    <p><a routerLink="input-binds">01. Input Binds (only)</a> [<a href="https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding" target="_blank">resource</a>]</p>
+    <p><a routerLink="input-getters">02. Input Binds Involving Getters</a> [<a href="https://angular.io/guide/component-interaction#intercept-input-property-changes-with-a-setter" target="_blank">resource</a>]</p>
+    <p><a routerLink="ng-on-changes">03. Input Binds Involving ngOnChanges</a> [<a href="https://angular.io/guide/component-interaction#intercept-input-property-changes-with-ngonchanges" target="_blank">resource</a>]</p>
+    <p><a routerLink="output-binds">04. Output Binds are Meh</a> [<a href="https://angular.io/guide/component-interaction#parent-listens-for-child-event" target="_blank">resource</a>]</p>
+    <p><a routerLink="local-template-variables">05. Local Template Variables</a> [<a href="https://angular.io/guide/component-interaction#parent-interacts-with-child-using-local-variable" target="_blank">resource</a>]</p>
+    <p><a routerLink="view-child">06. View Child</a> [<a href="https://angular.io/guide/component-interaction#parent-calls-an-viewchild" target="_blank">resource</a>]</p>
+    <p><a routerLink="services">07. Services Involving Subject Pattern</a> [<a href="https://angular.io/guide/component-interaction#parent-and-children-communicate-using-a-service" target="_blank">resource</a>]</p>
+</div>
+
+<div>
+    <h2>Recommended Libraries and Advanced Concepts Involving Services</h2>
+
+    <p>Services are a key solution for an immutable state solution to Component interactions</p>
+    
+    <p><a routerLink="ngrx-component-store">08. NgRx Component Store</a></p>
+    <p><a routerLink="dependency-inject">09. Single Service Involving Dependency Injection and Tokens</a></p>
+</div>
+
+<div>
+    <h2>Advanced Concepts Involving the Template</h2>
+
+    <p>The template provides a lot of reactive solutions. Here is how to avoid performance issues.</p>
+    
+    <p><a routerLink="child-pipes">10. Child Component Involving Pipes (PurePipe)</a> [<a href="https://stackblitz.com/edit/angular-ivy-ewmziw?file=src%2Fapp%2Fpure.pipe.ts" target="_blank">stackblitz</a>]</p>
+    <p><a routerLink="memos">11. Child Component Involving Memos</a> [<a href="https://itnext.io/its-ok-to-use-function-calls-in-angular-templates-ffdd12b0789e?gi=bb493d5c7423" target="_blank">Resource</a>] [<a href="https://stackblitz.com/edit/angular-ivy-ewmziw?file=src%2Fapp%2Fmemo.ts" target="_blank">stackblitz</a>]</p>
+    <p><a routerLink="to-observable-pipe">12. Parent Component Involving `toObservable` Pipes</a> [<a href="https://stackblitz.com/edit/angular-ivy-bjtc7r?file=src%2Fapp%2Fapp.component.html" target="_blank">stackblitz</a>]</p>
+</div>
+
+<div>
+    <h2>Unusual Advanced Alternative</h2>
+
+    <p></p>
+    
+    <p><a routerLink="structural-directive">13. Structural Directives and Presenter Components</a> [<a href="https://stackblitz.com/edit/angular-ivy-qcgmis?file=src%2Fapp%2Frerender.directive.ts" target="_blank">stackblitz</a>]</p>
+    <p><a routerLink="getter-subject-pattern">14. Input Binds Involving Getters + Subjects</a></p>
+    <p><a routerLink="ng-on-changes-subject-pattern">15. Input Binds + ngOnChanges + Subjects</a></p>    
+</div>
+
+<div class="spacer"></div>

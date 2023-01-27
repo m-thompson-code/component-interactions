@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/ngrx-component-store">Previous</a> <a routerLink="/child-pipes">Next</a>
+</div>
+
+<h1>Single Service Involving Dependency Injection and Tokens</h1>
+
+<p>This solution more complex than the using a Service or something like an NgRx Component Store</p>
+<p>But one thing is nice is that it results in less boilerplate</p>
+
+<div class="container">
+    <input [value]="first$ | async" (input)="handleFirstChange($event)" placeholder="first" type="number"><br>
+    <input [value]="second$ | async" (input)="handleSecondChange($event)" placeholder="second" type="number"><br>
+
+    <app-product #productComponent class="container"></app-product>
+</div>

@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+$spacing: 12px;
+$font-size: 24px;
+$line-height: 1.4;
+
+$tan: antiquewhite;
+$blue: lightskyblue;
+$orange: orangered;
+
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: 0 auto;
+    width: 85vw;
+    max-width: 1080px;
+}
+
+button, input {
+    font-size: $font-size;
+    line-height: $line-height;
+    margin: $spacing * .5 0 $spacing;
+}
+input {
+    border-radius: $spacing * .5;
+    border-color: rgba(grey, .75);
+}
+
+img {
+    display: block;
+    border-radius: $spacing * .5;
+}
+
+.container {
+    position: relative;
+    padding: $spacing $spacing;
+    margin: $spacing 0;
+    border-radius: $spacing * .75;
+    background: $tan;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    app-product, .container {
+        display: block;
+        padding: $spacing $spacing;
+        margin: $spacing 0;
+        border-radius: $spacing * .75;
+        background: rgba($blue, .9);
+        border: 2px solid $blue;
+        box-shadow: initial;
+    }
+}
+.container:after {
+    z-index: -1;
+    content: "";
+    position:absolute;
+    display: block;
+    top: $spacing * .75;
+    left: $spacing * .75;
+    border-radius: $spacing * .75;
+    background: $orange;
+    opacity: .45;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

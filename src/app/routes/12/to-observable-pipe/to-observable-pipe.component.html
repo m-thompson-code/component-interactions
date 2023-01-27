@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/memos">Previous</a> <a routerLink="/structural-directive">Next</a>
+</div>
+
+<h1>Parent Component Involving `toObservable` Pipes</h1>
+
+<p>Another way to communicate reactively to a child Component is to use the `toObservable` Pipe</p>
+<p>The `toObservable` Pipe will allow you to transform any binded value in the template to an toObservable</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first$]="first | toObservable" [second$]="second | toObservable"></app-product>
+</div>

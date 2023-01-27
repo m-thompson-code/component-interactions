@@ -1,0 +1,15 @@
+<div class="navigation">
+    <a routerLink="/child-pipes">Previous</a> <a routerLink="/to-observable-pipe">Next</a>
+</div>
+
+<h1>Child Component Involving Memos</h1>
+
+<p>Like the solution Involving the PurePipe, we will communicate with child Components reactively using a memo function.</p>
+<p>memo functions work the same way that pipes work so there won't be any performance impact</p>
+
+<div class="container">
+    <input [(ngModel)]="first" placeholder="first" type="number"><br>
+    <input [(ngModel)]="second" placeholder="second" type="number"><br>
+
+    <app-product [first]="first" [second]="second"></app-product>
+</div>
